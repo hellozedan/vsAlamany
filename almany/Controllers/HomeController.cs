@@ -11,7 +11,10 @@ namespace almany.Controllers
         public ActionResult Index()
         {////////////////
             ////homee
+            //////
+
             return View();
+
         }
 
         public ActionResult About()
