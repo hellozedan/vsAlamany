@@ -28,5 +28,7 @@ namespace almany.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<almany.AfterBeforeImage> AfterBeforeImages { get; set; }
     }
 }
