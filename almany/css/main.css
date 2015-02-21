@@ -1,0 +1,17 @@
+﻿
+#carousel #owl-demo .item img {
+    height: auto;
+    width: 50%;
+    float: right;
+}
+.after{
+    position:relative;
+    float:right;
+    right:43%;
+    width:auto;
+}
+.before{
+    float:right;
+    width:auto;
+
+}
