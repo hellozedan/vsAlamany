@@ -12,7 +12,9 @@
                         <h2>לפני</h2>
                     </div>
                     <div class="s-12 l-9 after">
-                        <h2 >אחרי</h2>
+                       
+                            <h2>אחרי</h2>
+                       
                     </div>
                 </div>
             </div>
@@ -50,7 +52,7 @@
 <!-- FIRST BLOCK -->
 <div id="first-block">
     <div class="line">
-        <h2>למה לבחור מוסך אלאמאנה </h2>
+        <h2>למה מוסך אלאמאנה </h2>
         <div class="margin">
             <div class="s-12 l-3 margin-bottom">
                 <i class="icon-star icon2x"></i>
@@ -86,15 +88,32 @@
         <div class="margin-bottom">
             <div class="margin">
                 <article class="s-12 l-8 center">
-                    <h1>איך לשמר על האוטו שלך</h1>
-                    <p class="margin-bottom">
-                        איך לשמר על האוטו שלך
-                        איך לשמר על האוטו שלך
-                        איך לשמר על האוטו שלך
-                        איך לשמר על האוטו שלך                    </p>
-                    <a class="button s-12 l-4 center" href="product.html">להמשך הכתבה</a>
+                    <h1>בדיקה מקצועית </h1>
+                    <p class="margin-bottom" >
+עכשיו לכל הלקוחות המגיעים דרך האתר בדיקה מקצועית בחינם !!                   </p>
+                    <input type="file" name="image">
+                    <input type="submit" value="Upload">
+                    <a class="button s-12 l-4 center" href="product.html">לקביעת מועד</a>
                 </article>
             </div>
         </div>
     </div>
 </div>
+<script>
+    // Detect file input support
+    var isFileInputSupported = (function () {
+        // Handle devices which falsely report support
+        if (navigator.userAgent.match(/(Android (1.0|1.1|1.5|1.6|2.0|2.1))|(Windows Phone (OS 7|8.0))|(XBLWP)|(ZuneWP)|(w(eb)?OSBrowser)|(webOS)|(Kindle\/(1.0|2.0|2.5|3.0))/)) {
+            return false;
+        }
+        // Create test element
+        var el = document.createElement("input");
+        el.type = "file";
+        return !el.disabled;
+    })();
+
+    // Add 'fileinput' class to html element if supported
+    if (isFileInputSupported) {
+        document.documentElement.className += " fileinput";
+    }
+</script>
