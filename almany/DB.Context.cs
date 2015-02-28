@@ -13,10 +13,10 @@ namespace almany
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class alamanyDBEntities1 : DbContext
+    public partial class Entities : DbContext
     {
-        public alamanyDBEntities1()
-            : base("name=alamanyDBEntities1")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -25,7 +25,9 @@ namespace almany
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<AfterBeforeImage> AfterBeforeImages { get; set; }
+        public virtual DbSet<CursoleArticle> CursoleArticles { get; set; }
+        public virtual DbSet<GalleryImage> GalleryImages { get; set; }
+        public virtual DbSet<ContactU> ContactUs { get; set; }
     }
 }

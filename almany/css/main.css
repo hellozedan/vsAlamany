@@ -23,3 +23,9 @@
     width:auto;
 
 }
+.customform div {
+    float: right;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 0px;
+}

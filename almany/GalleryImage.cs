@@ -12,12 +12,11 @@ namespace almany
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class GalleryImage
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int id { get; set; }
+        public string title { get; set; }
+        public string image_url { get; set; }
+        public Nullable<bool> statuss { get; set; }
     }
 }

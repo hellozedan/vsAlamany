@@ -1,0 +1,17 @@
+﻿@model IEnumerable<almany.CursoleArticle>
+<div id="fourth-block">
+
+    <div class="line">
+        <div id="owl-demo2" class="owl-carousel owl-theme">
+            @foreach(var item in Model)
+            {
+            <div class="item">
+                <h2> @item.title</h2>
+                <p class="s-12 l-8 center">
+                   @item.subtitle
+                </p>
+            </div>
+            }
+        </div>
+    </div>
+</div>

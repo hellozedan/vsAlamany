@@ -1,54 +1,7 @@
 ﻿
 
         <!-- CAROUSEL -->
-<div id="carousel">
-    <div id="owl-demo" class="owl-carousel owl-theme">
-        <div class="item">
-            <img src="~/pictures/select/New folder/DSCF0154.jpg" alt="">
-            <img src="~/pictures/select/New folder/DSCF0194.jpg" alt="">
-            <div class="carousel-text">
-                <div class="line">
-                    <div class="s-12 l-9 before">
-                        <h2>לפני</h2>
-                    </div>
-                    <div class="s-12 l-9 after">
-                       
-                            <h2>אחרי</h2>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/pictures/select/New folder/DSCF0154.jpg" alt="">
-            <img src="~/pictures/select/New folder/DSCF0194.jpg" alt="">
-            <div class="carousel-text">
-                <div class="line">
-                    <div class="s-12 l-9 before">
-                        <h2>לפני</h2>
-                    </div>
-                    <div class="s-12 l-9 after">
-                        <h2>אחרי</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/pictures/select/New folder/DSCF0154.jpg" alt="">
-            <img src="~/pictures/select/New folder/DSCF0194.jpg" alt="">
-                        <div class="carousel-text">
-                <div class="line">
-                    <div class="s-12 l-9 before">
-                        <h2>לפני</h2>
-                    </div>
-                    <div class="s-12 l-9 after">
-                        <h2>אחרי</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@Html.Action("Index", "AfterBeforeImages")
 <!-- FIRST BLOCK -->
 <div id="first-block">
     <div class="line">
@@ -91,14 +44,16 @@
                     <h1>בדיקה מקצועית </h1>
                     <p class="margin-bottom" >
 עכשיו לכל הלקוחות המגיעים דרך האתר בדיקה מקצועית בחינם !!                   </p>
-                    <input type="file" name="image">
-                    <input type="submit" value="Upload">
+                    @*<input type="file" name="image">
+                    <input type="submit" value="Upload">*@
                     <a class="button s-12 l-4 center" href="product.html">לקביעת מועד</a>
                 </article>
             </div>
         </div>
     </div>
 </div>
+@Html.Action("Index", "ArticleCarousel")
+
 <script>
     // Detect file input support
     var isFileInputSupported = (function () {
