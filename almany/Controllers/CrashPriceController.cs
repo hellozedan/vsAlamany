@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 namespace almany.Controllers
 {
     public class CrashPriceController : Controller
@@ -27,6 +26,7 @@ namespace almany.Controllers
                     if (!exists)
                         Directory.CreateDirectory(Server.MapPath("~/Images/CrashPrice"));
                     var url_image_1_path = Path.Combine(Server.MapPath("~/Images/CrashPrice"), url_image_1_fileName);
+                    almany.Models.
                     url_image_1.SaveAs(url_image_1_path);
                     crashPrice.url_image_1 = "/Images/CrashPrice/" + url_image_1_fileName;
                 }
@@ -49,6 +49,7 @@ namespace almany.Controllers
                     if (!exists)
                         Directory.CreateDirectory(Server.MapPath("~/Images/CrashPrice"));
                     var url_image_3_path = Path.Combine(Server.MapPath("~/Images/CrashPrice"), url_image_3_fileName);
+                   
                     url_image_3.SaveAs(url_image_3_path);
                     crashPrice.url_image_3 = "/Images/CrashPrice/" + url_image_3_fileName;
                 }
