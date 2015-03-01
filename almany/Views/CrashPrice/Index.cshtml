@@ -1,0 +1,58 @@
+﻿
+
+@model almany.CrashPrice
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="head">
+    <div class="line">
+        <h1>קבל הצעת מחיר</h1>
+    </div>
+</div>
+<div id="content" class="left-align contact-page">
+    <div class="line">
+        <div class="margin">
+            <div class="s-12 l-6 " style="float: none;margin: 0px auto;">
+                <h2>הצעת מחיר אטרקטיבית</h2>
+
+                @using (Html.BeginForm("Index", "CrashPrice", FormMethod.Post, new { enctype = "multipart/form-data", @class = "customform" }))
+                {
+                        <div class="s-12 l-7">
+                        @Html.EditorFor(model => model.name, new { htmlAttributes = new { @placeholder = "שם" } })
+                        @Html.ValidationMessageFor(model => model.name)
+                    </div>
+                    <div class="s-12 l-7">
+                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @placeholder = "מייל" } })
+                        @Html.ValidationMessageFor(model => model.email)
+                    </div>
+                    <div class="s-12 l-7">
+                        @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @placeholder = "פלאפון" } })
+                        @Html.ValidationMessageFor(model => model.phone)
+                    </div>
+    <div class="s-12 l-7 ">
+        <input class="s-4" type="file" name="url_image_1" accept="image/*" />
+    </div>
+    <div class="s-12 l-7 ">
+        <input class="s-4" type="file" name="url_image_2" accept="image/*" />
+    </div>
+    <div class="s-12 l-7 ">
+        <input class="s-4" type="file" name="url_image_3" accept="image/*" />
+    </div>
+                    <div class="s-12">
+                        @Html.TextAreaFor(model => model.messag, new { @rows = 5, @placeholder = "מידע חשוב" })
+                    </div>
+
+                    <div class="s-4"><button type="submit">שלח</button></div>
+
+                }
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -22,6 +22,7 @@ namespace almany.Controllers
             if (ModelState.IsValid)
             {
                 contactU.statuss = false;
+                contactU.created_date = DateTime.Now;
                 db.ContactUs.Add(contactU);
                 db.SaveChanges();
                return RedirectToAction("Index","Home");

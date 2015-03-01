@@ -170,8 +170,12 @@
     <Compile Include="Controllers\AfterBeforeImagesController.cs" />
     <Compile Include="Controllers\ArticleCarouselController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
+    <Compile Include="Controllers\CrashPriceController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CrashPrice.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="CursoleArticle.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -305,9 +309,11 @@
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Shared\ImageGallery.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
+    <Content Include="Views\CrashPrice\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Views\ArticleCarousel\" />
   </ItemGroup>
   <ItemGroup>
