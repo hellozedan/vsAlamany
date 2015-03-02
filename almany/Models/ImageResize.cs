@@ -7,14 +7,20 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace almany.App_Code
+namespace almany.Models
 {
     public static class ImageResize
     {
-        
-        public static byte[] ResizeImageFile(byte[] imageFile ) // Set targetSize to 1024
+
+        public static byte[] ResizeImageFile(HttpPostedFile httpPostedFile) // Set targetSize to 1024
         {
-            int targetSize=1024;
+            byte[] imageFile = null;
+            int targetSize = 1024;
+            using (var binaryReader = new BinaryReader(httpPostedFile.InputStream))
+            {
+                fileData = binaryReader.ReadBytes(httpPostedFile.ContentLength);
+            }
+
             using (System.Drawing.Image oldImage = System.Drawing.Image.FromStream(new MemoryStream(imageFile)))
             {
                 Size newSize = CalculateDimensions(oldImage.Size, targetSize);

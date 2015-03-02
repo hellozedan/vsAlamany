@@ -158,6 +158,7 @@
     <Compile Include="AfterBeforeImage.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Content Include="img\background.jpg" />
     <Content Include="Models\ImageResize.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -225,7 +226,6 @@
     <Content Include="img\first-small.jpg" />
     <Content Include="img\fourth-small.jpg" />
     <Content Include="img\logo.png" />
-    <Content Include="img\background.jpg" />
     <Content Include="img\logos.jpg" />
     <Content Include="img\second-small.jpg" />
     <Content Include="img\second.jpg" />
