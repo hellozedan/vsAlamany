@@ -12,17 +12,12 @@ namespace almany
     using System;
     using System.Collections.Generic;
     
-    public partial class CrashPrice
+    public partial class Check
     {
         public int id { get; set; }
-        public string email { get; set; }
-        public string phone { get; set; }
-        public string messag { get; set; }
-        public string url_image_1 { get; set; }
-        public string url_image_2 { get; set; }
-        public string url_image_3 { get; set; }
-        public Nullable<bool> statuss { get; set; }
         public string name { get; set; }
-        public Nullable<System.DateTime> created_date { get; set; }
+        public Nullable<System.DateTime> datee { get; set; }
+        public string phone { get; set; }
+        public Nullable<int> timee { get; set; }
     }
 }

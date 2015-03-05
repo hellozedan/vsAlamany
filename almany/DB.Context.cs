@@ -30,5 +30,6 @@ namespace almany
         public virtual DbSet<GalleryImage> GalleryImages { get; set; }
         public virtual DbSet<ContactU> ContactUs { get; set; }
         public virtual DbSet<CrashPrice> CrashPrices { get; set; }
+        public virtual DbSet<Check> Checks { get; set; }
     }
 }

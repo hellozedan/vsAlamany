@@ -29,3 +29,28 @@
     direction: rtl;
     margin-bottom: 0px;
 }
+#inlineDatepicker{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#checkTimes .l-4{
+    width: 18%;
+    min-width: 160px;
+    margin: auto;
+    padding-left: 4%;
+}
+.content-block{
+    padding:0 !important;
+}
+#checkTimes{
+position: relative;
+direction: rtl;
+width: 80%;
+margin: auto;
+text-align: center;
+
+}
+.content-block p{
+    font-size: 1.8em;
+}

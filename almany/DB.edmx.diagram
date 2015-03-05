@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="Model.GalleryImage" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="Model.ContactU" Width="1.5" PointX="3.375" PointY="3.75" />
         <EntityTypeShape EntityType="Model.CrashPrice" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.Check" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

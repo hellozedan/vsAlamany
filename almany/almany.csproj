@@ -158,6 +158,10 @@
     <Compile Include="AfterBeforeImage.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Content Include="DatePicker\jquery.datepick-he.js" />
+    <Content Include="DatePicker\jquery.datepick.css" />
+    <Content Include="DatePicker\jquery.datepick.js" />
+    <Content Include="DatePicker\jquery.plugin.js" />
     <Content Include="img\background.jpg" />
     <Content Include="Models\ImageResize.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -165,12 +169,16 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Check.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="ContactU.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AfterBeforeImagesController.cs" />
     <Compile Include="Controllers\ArticleCarouselController.cs" />
+    <Compile Include="Controllers\CheckController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\CrashPriceController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
@@ -311,6 +319,7 @@
     <Content Include="Views\Shared\ImageGallery.cshtml" />
     <Content Include="Views\ContactUs\Index.cshtml" />
     <Content Include="Views\CrashPrice\Index.cshtml" />
+    <Content Include="Views\Check\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
