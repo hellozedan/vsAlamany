@@ -8,6 +8,8 @@
 <script src="~/DatePicker/jquery.plugin.js"></script>
 <script src="~/DatePicker/jquery.datepick.js"></script>
 <script src="~/DatePicker/jquery.datepick-he.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 <div id="head">
     <div class="line">
         <h1>Amazing responsive theme based on Responsee</h1>
@@ -17,18 +19,15 @@
     <div class="line">
         <div class="margin">
             <div id="inlineDatepicker" ></div>
-            <div id="checkTimes">
-                @for (int i = 0; i < 12; i++) { 
-                <div class="s-12 l-4">
-                    <div class="content-block margin-bottom">
-                        <i class="icon-attachment icon2x"></i>
-                        <h3>9:00</h3>
-                        <p>
-                            פנוי
-                        </p>
+            <div id="dialog" title="" style="display:none">
+                </div>
+                <div class="s-12 l-6">
+                    <div id="formContent">
+
                     </div>
                 </div>
-                }
+            <div id="checkTimes">
+
             </div>
         </div>
     </div>
@@ -39,6 +38,7 @@
     });
 
     function SelectDate(selectedData) {
+        $('#checkTimes').html("<img src='/img/loader.gif'/>");
         debugger
         $.ajax({
             url: '/Check/GetAvailableTimesInDates',
@@ -48,14 +48,63 @@
             },
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
-                debugger
-                alert(data.success);
+                data = JSON.parse(data);
+                var text = "<input type='hidden' id='selectedDate1' value='"+selectedData[0].toLocaleDateString()+"' />";
+
+                 for (var i = 0; i < 12; i++) { 
+                     text += "<div class='s-12 l-4"+GetClass(data,i)+"'>" +
+                     "<div class='content-block margin-bottom' onClick='sec( " +i+")'>" +
+                     "<i class='icon-attachment icon2x'></i>" +
+                             "<h3>" + GetStringTime(i) + "</h3>" +
+                             canCheck(data,i) +
+                         "</div>"+
+                     "</div>";
+                 }
+                 $('#checkTimes').html(text);
             },
             error: function () {
-                debugger
-                alert("error");
+                var text = "<div class='s-12 l-4>בחר תאריך אחר !!</div>";
+                $('#checkTimes').html(text);
             }
         });
 
+    }
+    function GetStringTime(time){
+        switch(time){
+            case 0: return "8:00";
+            case 1: return "8:30";
+            case 2: return "9:00";
+            case 3: return "9:30";
+            case 4: return "10:00";
+            case 5: return "10:30";
+            case 6: return "11:00";
+            case 7: return "11:30";
+            case 8: return "12:00";
+            case 9: return "12:30";
+            case 10: return "1:00";
+            case 11: return "1:30";
+        }
+    }
+    function canCheck(data, index) {
+        debugger
+        if (data[index])
+            return "<p>תפוס</p>";
+        else return "<p>פנוי</p>";
+    }
+    function GetClass(data, index) {
+        if (data[index])
+            return " cantSec";
+        else return " canSec";
+    }
+    function sec(index) {
+        debugger
+        var text = "<form action='/Check' class='customform' enctype='multipart/form-data' method='post'> ";
+        text += "<div class='s-12'><input id='name' name='name' placeholder='שם' type='text'/></div>";
+        text += " <div class='s-12'><input id='phone' name='phone' placeholder='פלאפון' type='text'/></div>";
+        text += " <input id='selDate' name='selDate' type='hidden' value='" + $("#selectedDate1").val() + "'/>";
+        text += " <input id='selTime' name='selTime' type='hidden' value='" + index + "'/>";
+        text += " <button type='submit' >הכנס</button></form>";
+        $("#dialog").html(text);
+        $("#dialog").dialog();
     }
 </script>

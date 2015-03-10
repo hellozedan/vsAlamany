@@ -54,3 +54,9 @@ text-align: center;
 .content-block p{
     font-size: 1.8em;
 }
+.cantSec .content-block{
+    background: none repeat scroll 0 0 rgb(87, 22, 34);
+}
+.canSec .content-block{
+    cursor: pointer;
+}

@@ -163,6 +163,7 @@
     <Content Include="DatePicker\jquery.datepick.js" />
     <Content Include="DatePicker\jquery.plugin.js" />
     <Content Include="img\background.jpg" />
+    <Content Include="img\loader.gif" />
     <Content Include="Models\ImageResize.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -320,6 +321,7 @@
     <Content Include="Views\ContactUs\Index.cshtml" />
     <Content Include="Views\CrashPrice\Index.cshtml" />
     <Content Include="Views\Check\Index.cshtml" />
+    <Content Include="Views\Shared\Sucess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

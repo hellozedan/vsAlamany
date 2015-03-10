@@ -1,0 +1,14 @@
+﻿@model string
+@{
+    ViewBag.Title = "Sucess";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="head">
+    <div class="line">
+        <h1>@Model הפעולה התבצעה בהצלחה !</h1>
+    </div>
+</div>
+<script type="text/javascript">
+    setTimeout(function () { window.location.href = '/Home'; }, 3000);
+</script>
+
