@@ -40,6 +40,7 @@ namespace almany.Controllers
         [HttpGet]
         public string GetAvailableTimesInDates(string date)
         {
+            
             var serializer = new JavaScriptSerializer();
             DateTime selectedDate= Convert.ToDateTime(date);
             bool[] Available = new bool[12];
