@@ -1,8 +1,10 @@
 ﻿@model almany.GalleryImage
 
 <div class="s-12 l-4">
-    <img src="@Model.image_url">
-    <p class="subtitile">
-@Model.title
+    <a class="fancybox" href="@Model.image_url" data-fancybox-group="gallery" title="@Model.title">
+        <img src="@Model.image_url">
+    </a>
+        <p class="subtitile">
+            @Model.title
         </p>
 </div>

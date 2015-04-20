@@ -158,12 +158,20 @@
     <Compile Include="AfterBeforeImage.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Content Include="css\blank.gif" />
+    <Content Include="css\fancybox_loading%402x.gif" />
+    <Content Include="css\fancybox_loading.gif" />
+    <Content Include="css\fancybox_overlay.png" />
+    <Content Include="css\fancybox_sprite%402x.png" />
+    <Content Include="css\fancybox_sprite.png" />
+    <Content Include="css\jquery.fancybox.css" />
     <Content Include="DatePicker\jquery.datepick-he.js" />
     <Content Include="DatePicker\jquery.datepick.css" />
     <Content Include="DatePicker\jquery.datepick.js" />
     <Content Include="DatePicker\jquery.plugin.js" />
     <Content Include="img\background.jpg" />
     <Content Include="img\loader.gif" />
+    <Content Include="img\logo.png" />
     <Content Include="Models\ImageResize.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -234,7 +242,6 @@
     <Content Include="img\first.jpg" />
     <Content Include="img\first-small.jpg" />
     <Content Include="img\fourth-small.jpg" />
-    <Content Include="img\logo.png" />
     <Content Include="img\logos.jpg" />
     <Content Include="img\second-small.jpg" />
     <Content Include="img\second.jpg" />
@@ -276,6 +283,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

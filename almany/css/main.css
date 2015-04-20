@@ -60,3 +60,17 @@ text-align: center;
 .canSec .content-block{
     cursor: pointer;
 }
+.logoAlamny{
+   background-image: url(/img/logo.png);
+  background-size: 188px 57px;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 190px;
+  margin-top: 2.2px;
+  margin-right: 2px;
+  background-color: #2fcbe0;
+  border-radius: 16px;
+}
+.logoAlamny:hover{
+
+}
