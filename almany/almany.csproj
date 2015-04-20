@@ -172,6 +172,7 @@
     <Content Include="img\background.jpg" />
     <Content Include="img\loader.gif" />
     <Content Include="img\logo.png" />
+    <Content Include="favicon.ico" />
     <Content Include="Models\ImageResize.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -231,7 +232,6 @@
     <Content Include="css\main.css" />
     <Content Include="css\responsee.css" />
     <Content Include="css\template-style.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="font\mfglabsiconset-webfont.svg" />
     <Content Include="Global.asax" />

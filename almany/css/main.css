@@ -71,6 +71,14 @@ text-align: center;
   background-color: #2fcbe0;
   border-radius: 16px;
 }
-.logoAlamny:hover{
-
+.top-nav li a.logoAlamny:hover,.top-nav li.active-item a.logoAlamny {
+  background-color:  rgba(47, 203, 224, 0.67) ;
+   background-image: url(/img/logo.png) ;
+  background-size: 188px 57px ;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 190px;
+  margin-top: 2.2px;
+  margin-right: 2px;
+  border-radius: 16px;
 }
